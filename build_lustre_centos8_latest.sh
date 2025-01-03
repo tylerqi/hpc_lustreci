@@ -85,7 +85,18 @@ sudo mv "$DIR_HOME/lustre.repo" "/etc/yum.repos.d/"
 sudo createrepo $DIR_REPO
 sudo yum update -y
 
-# sudo yum config-manager --set-enabled PowerTools
+cat << EOF > "$DIR_HOME/CentOS-PowerTools.repo"
+[PowerTools]
+name=CentOS-$releasever - PowerTools
+mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=PowerTools&infra=$infra
+#baseurl=http://mirror.centos.org/$contentdir/$releasever/PowerTools/$basearch/os/
+gpgcheck=0
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+EOF
+sudo mv "$DIR_HOME/CentOS-PowerTools.repo" "/etc/yum.repos.d/"
+
+sudo yum config-manager --set-enabled PowerTools
 sudo yum -y install "@Development Tools"
 sudo yum -y install kernel-abi-whitelists kernel-rpm-macros kernel-devel || true # kernel* could be in exclude list of yum.conf
 sudo yum -y install xmlto asciidoc elfutils-libelf-devel zlib-devel binutils-devel newt-devel python3-devel \
@@ -95,8 +106,8 @@ sudo yum -y install xmlto asciidoc elfutils-libelf-devel zlib-devel binutils-dev
 			zlib-devel libuuid-devel libattr-devel libblkid-devel libselinux-devel libudev-devel \
 			parted lsscsi ksh openssl-devel elfutils-libelf-devel createrepo \
 			vim wget libaio-devel redhat-lsb-core \
-			libyaml-devel libffi-devel libtirpc-devel lua tcl lua-json
-                        # texinfo 
+			texinfo libyaml-devel libffi-devel libtirpc-devel lua tcl lua-json
+                        # 
 
 sudo yum -y install --enablerepo="PowerTools" python3 python3-devel python3-setuptools python3-cffi libyaml-devel libyaml libtool
 sudo yum -y install epel-release
