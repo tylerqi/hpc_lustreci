@@ -95,8 +95,8 @@ sudo yum -y install xmlto asciidoc elfutils-libelf-devel zlib-devel binutils-dev
 			zlib-devel libuuid-devel libattr-devel libblkid-devel libselinux-devel libudev-devel \
 			parted lsscsi ksh openssl-devel elfutils-libelf-devel createrepo \
 			vim wget libaio-devel redhat-lsb-core \
-			texinfo libyaml-devel libffi-devel libtirpc-devel lua tcl lua-json
-
+			libyaml-devel libffi-devel libtirpc-devel lua tcl lua-json
+                        # texinfo 
 
 sudo yum -y install --enablerepo="PowerTools" python3 python3-devel python3-setuptools python3-cffi libyaml-devel libyaml libtool
 sudo yum -y install epel-release
