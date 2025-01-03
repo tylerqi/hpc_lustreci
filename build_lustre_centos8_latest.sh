@@ -88,7 +88,7 @@ sudo yum update -y
 cat << EOF > "$DIR_HOME/CentOS-PowerTools.repo"
 [PowerTools]
 name=CentOS-$releasever - PowerTools
-mirrorlist=http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=PowerTools&infra=$infra
+baseurl=https://rocky.mirror.shastacoe.net/rocky/8.10/PowerTools/x86_64/os/
 #baseurl=http://mirror.centos.org/$contentdir/$releasever/PowerTools/$basearch/os/
 gpgcheck=0
 enabled=1
