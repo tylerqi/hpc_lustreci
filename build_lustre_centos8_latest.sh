@@ -85,7 +85,7 @@ sudo mv "$DIR_HOME/lustre.repo" "/etc/yum.repos.d/"
 sudo createrepo $DIR_REPO
 sudo yum update -y
 
-sudo yum config-manager --set-enabled PowerTools
+# sudo yum config-manager --set-enabled PowerTools
 sudo yum -y install "@Development Tools"
 sudo yum -y install kernel-abi-whitelists kernel-rpm-macros kernel-devel || true # kernel* could be in exclude list of yum.conf
 sudo yum -y install xmlto asciidoc elfutils-libelf-devel zlib-devel binutils-devel newt-devel python3-devel \
