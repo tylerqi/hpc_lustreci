@@ -103,7 +103,8 @@ sudo yum config-manager --set-enabled PowerTools
 sudo yum -y install "@Development Tools"
 sudo yum -y install kernel-abi-whitelists kernel-rpm-macros kernel-devel || true # kernel* could be in exclude list of yum.conf
 
-ls /usr/src/kernels
+yum install -y ncompress python3-packaging
+
 sudo yum -y install xmlto asciidoc elfutils-libelf-devel zlib-devel binutils-devel newt-devel python3-devel \
 			hmaccalc perl-ExtUtils-Embed bison elfutils-devel audit-libs-devel \
 			libattr-devel libuuid-devel libblkid-devel libselinux-devel libudev-devel \
