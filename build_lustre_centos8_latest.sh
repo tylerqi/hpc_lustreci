@@ -119,6 +119,8 @@ sudo yum -y install --enablerepo="PowerTools" python3 python3-devel python3-setu
 sudo yum -y install epel-release
 sudo yum -y install dbench
 
+yum -y install libmount libmount-devel
+
 #sudo yum -y --exclude=kernel* install http://build.openhpc.community/OpenHPC:/1.3/CentOS_7/aarch64/ohpc-release-1.3-1.el7.aarch64.rpm || true 
 #sudo yum -y update
 #sudo yum -y install Lmod
