@@ -35,7 +35,7 @@ SPL_URL="https://github.com/zfsonlinux/zfs/releases/download/zfs-$ZFS_VERSION/sp
 DIR_E2PROGS="$DIR_HOME/e2fsprogs"
 DIR_E2PROGS_SRC="$DIR_E2PROGS/e2fsprogs"
 E2FSPROGS_PACKAGING_URL="http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.44.6-1.debian.tar.xz"
-DIR_RPMBUILD="/home/$USER/rpmbuild/RPMS/aarch64/"
+DIR_RPMBUILD="/home/$USER/rpmbuild/RPMS/x86_64/"
 
 #### LUSTRE BUILD ENV
 DIR_LUSTRE="$DIR_HOME/lustre"
@@ -44,7 +44,7 @@ LUSTRE_BRANCH="lustre-arm"
 
 
 #### BUILD
-DIR_KERNEL="/home/$USER/rpmbuild/BUILD/kernel-4.18.0-80.11.2.el8_0/linux-4.18.0-80.11.2.el8.aarch64/"
+DIR_KERNEL="/home/$USER/rpmbuild/BUILD/kernel-4.18.0-80.11.2.el8_0/linux-4.18.0-80.11.2.el8.x86_64/"
 
 mkdir -p $DIR_HOME
 mkdir -p $DIR_REPO_LUSTRE
