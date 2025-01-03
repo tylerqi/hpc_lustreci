@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Where Am I?
       run: |
-        ls ${{github.workspace}}/
+        ls /
         
     - name: Run Buil CentOS 8 latest
       run: |
