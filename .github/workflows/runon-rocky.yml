@@ -8,11 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: rockylinux/rockylinux:8
+      options: --workdir=/home/build/hpc_lustreci
     steps:
     - uses: actions/checkout@v4
     - name: Where Am I?
       run: |
-        ls /
+        ls ${{github.workspace}}
         
     - name: Run Buil CentOS 8 latest
       run: |
