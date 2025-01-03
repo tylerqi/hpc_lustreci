@@ -11,9 +11,9 @@ jobs:
       options: --workdir=/home/build/hpc_lustreci
     steps:
     - uses: actions/checkout@v4
-    - name: Where Am I?
+    - name: Install Deps
       run: |
-        ls ${{github.workdir}}
+        yum install -y sudo
         
     - name: Run Buil CentOS 8 latest
       run: |
