@@ -22,8 +22,8 @@ REPO_FILE=/etc/yum.repos.d/lustre_build.repo
 #### ZFS SPL BUILD ENV
 DIR_ZFS="$DIR_HOME/zfs"
 DIR_SPL="$DIR_HOME/zfs"
-ZFS_VERSION='0.8.2'
-ZFS_BRANCH='0.8.2'
+ZFS_VERSION='2.1.15'
+ZFS_BRANCH='2.1.15'
 DIR_SPL_SRC=$DIR_ZFS/spl-$ZFS_VERSION
 DIR_ZFS_SRC=$DIR_ZFS/zfs-$ZFS_VERSION
 ZFS_URL="https://github.com/zfsonlinux/zfs/releases/download/zfs-$ZFS_VERSION/zfs-$ZFS_VERSION.tar.gz"
