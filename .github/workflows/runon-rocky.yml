@@ -10,7 +10,6 @@ jobs:
       image: rockylinux/rockylinux:8
     steps:
     - uses: actions/checkout@v4
-
     - name: Where Am I?
       run: |
         ls ${{github.workspace}}/
