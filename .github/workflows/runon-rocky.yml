@@ -17,4 +17,4 @@ jobs:
         
     - name: Run Buil CentOS 8 latest
       run: |
-         ${{github.workdir}}/build_lustre_centos8_latest.sh
+         ./${{github.workdir}}/build_lustre_centos8_latest.sh
