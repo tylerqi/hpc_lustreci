@@ -12,6 +12,9 @@ ROOT="/home/$USER"
 DIR_HOME="$ROOT/lustre_build"
 alias l_make="$MAKE_ENV make -C"  
 
+ZFS_VERSION='2.1.15'
+ZFS_BRANCH='2.1.15'
+
 ### CREATEREPO FOR RPMS
 DIR_REPO="$ROOT/repo_lustre"
 DIR_REPO_LUSTRE="$DIR_REPO/lustre-$(date -I)"
@@ -22,8 +25,7 @@ REPO_FILE=/etc/yum.repos.d/lustre_build.repo
 #### ZFS SPL BUILD ENV
 DIR_ZFS="$DIR_HOME/zfs"
 DIR_SPL="$DIR_HOME/zfs"
-ZFS_VERSION='2.1.15'
-ZFS_BRANCH='2.1.15'
+
 DIR_SPL_SRC=$DIR_ZFS/spl-$ZFS_VERSION
 DIR_ZFS_SRC=$DIR_ZFS/zfs-$ZFS_VERSION
 ZFS_URL="https://github.com/zfsonlinux/zfs/releases/download/zfs-$ZFS_VERSION/zfs-$ZFS_VERSION.tar.gz"
