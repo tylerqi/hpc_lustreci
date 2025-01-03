@@ -100,7 +100,7 @@ sudo mv "$DIR_HOME/CentOS-PowerTools.repo" "/etc/yum.repos.d/"
 sudo yum config-manager --set-enabled PowerTools
 sudo yum -y install "@Development Tools"
 sudo yum -y install kernel-abi-whitelists kernel-rpm-macros kernel-devel || true # kernel* could be in exclude list of yum.conf
-ls /usr/src/kernel
+ls /usr/src/ 
 exit 1
 sudo yum -y install xmlto asciidoc elfutils-libelf-devel zlib-devel binutils-devel newt-devel python3-devel \
 			hmaccalc perl-ExtUtils-Embed bison elfutils-devel audit-libs-devel \
