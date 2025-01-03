@@ -45,7 +45,7 @@ LUSTRE_BRANCH="lustre-arm"
 
 #### BUILD
 # DIR_KERNEL="/home/$USER/rpmbuild/BUILD/kernel-4.18.0-80.11.2.el8_0/linux-4.18.0-80.11.2.el8.x86_64/"
-DIR_KERNEL="/usr/src/kernels/linux-$(uname -r)/"
+DIR_KERNEL="/usr/src/kernels/linux-4.18.0-553.33.1.el8_10.x86_64/"
 
 mkdir -p $DIR_HOME
 mkdir -p $DIR_REPO_LUSTRE
@@ -101,6 +101,7 @@ sudo yum config-manager --set-enabled PowerTools
 sudo yum -y install "@Development Tools"
 sudo yum -y install kernel-abi-whitelists kernel-rpm-macros kernel-devel || true # kernel* could be in exclude list of yum.conf
 
+ls /usr/src/kernels
 sudo yum -y install xmlto asciidoc elfutils-libelf-devel zlib-devel binutils-devel newt-devel python3-devel \
 			hmaccalc perl-ExtUtils-Embed bison elfutils-devel audit-libs-devel \
 			libattr-devel libuuid-devel libblkid-devel libselinux-devel libudev-devel \
