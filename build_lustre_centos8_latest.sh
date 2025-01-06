@@ -105,9 +105,11 @@ sudo yum -y install kernel-abi-whitelists kernel-rpm-macros kernel-devel || true
 
 yum install -y ncompress python3-packaging
 
-yum search libnl 
-# libnl-3-dev libnl-genl-3-dev
-exit 1
+# libnl-3-dev libnl-genl-3-dev 
+# For Server 
+yum install -y libnl3-cli libnl3-devel 
+
+
 sudo yum -y install xmlto asciidoc elfutils-libelf-devel zlib-devel binutils-devel newt-devel python3-devel \
 			hmaccalc perl-ExtUtils-Embed bison elfutils-devel audit-libs-devel \
 			libattr-devel libuuid-devel libblkid-devel libselinux-devel libudev-devel \
