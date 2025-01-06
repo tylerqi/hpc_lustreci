@@ -177,7 +177,7 @@ else
 	sudo createrepo $DIR_REPO
 	sudo yum clean all
 	sudo yum update -y || true
-	sudo yum -y install zfs kmod-zfs-devel
+	sudo yum -y install zfs kmod-zfs-devel libzfs5-devel
 	##for file in $DIR_ZFS_SRC/*.deb; do sudo gdebi -q --non-interactive $file; done
 fi
 
