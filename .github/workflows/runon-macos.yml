@@ -18,3 +18,4 @@ jobs:
     - name: Run Buil CentOS 8 latest
       run: |
          ./${{github.workdir}}/build_lustre_rocky8_10.sh
+         
